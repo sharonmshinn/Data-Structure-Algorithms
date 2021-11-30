@@ -6,15 +6,18 @@ public class Edge {
 	int dist;
 	Node tail;
 	Node head;
+	//implemented a classification variable for DelivB
 	String classification;
 	
 	public Edge( Node tailNode, Node headNode, int dist) {
 		setDist( dist );
 		setTail( tailNode );
 		setHead( headNode );
+		//Classification set to an empty String
 		classification = "";
 	}
 	
+	//Implemented a getter for classification
 	public String getClassification() {
 		return classification;
 	}
@@ -31,6 +34,7 @@ public class Edge {
 		return dist;
 	}
 	
+	//implemented a setter for classification
 	public void setClassification(String theClass) {
 		classification = theClass;
 	}
@@ -47,6 +51,7 @@ public class Edge {
 		dist = i;
 	}
 	
+	//implemented a toString to print the edge's tail and head with its classification
 	public String toString() {
 		String output = "";
 		output += this.getTail().getAbbrev() + "->" + this.getHead().getAbbrev() + "\t" + this.getClassification();
